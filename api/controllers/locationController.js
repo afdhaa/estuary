@@ -30,6 +30,7 @@ exports.read_a_location = function(req, res){
 }
 
 exports.update_a_location = function (req, res) {
+    //console.log(req.params)
     Locate.findOneAndUpdate({_id: req.params.locationId}, req.body, {new:true}, function (err, Locate) {
         if (err)
             res.send(err)
